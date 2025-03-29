@@ -1,8 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,20 +13,18 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
@@ -32,7 +33,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* 🔥 Centered Properly */
+    justify-content: center;
     gap: 30px;
 }
 
@@ -41,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #BFBFBF;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
@@ -49,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: whitesmoke;
+    color: #000;
 }
 
 main {
@@ -65,24 +66,24 @@ main {
 h1 {
     font-weight: 1000;
     font-size: 3.5rem;
-    margin-top: 55px; /* 🔥 Moves it down */
-    margin-bottom: 15px; /* 🔥 Reduced space */
+    margin-top: 55px;
+    margin-bottom: 15px;
 }
 
 h3 { 
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 2rem;
-    margin-top: -20px; /* 🔥 Reduced gap */
+    margin-top: -20px;
 }
 
 hr {
     width: 80%;
     border: none;
     height: 2px;
-    background-color: #fff;
+    background-color: #000;
     margin: 10px auto;
-    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -95,8 +96,7 @@ hr {
     font-size: 19px;
     flex-grow: 1;
     overflow-y: auto;
-    margin-top: -10px; /* 🔥 Moves it up slightly */
-    
+    margin-top: -10px;
 }
 
 ul {
@@ -110,7 +110,7 @@ footer {
     bottom: 10px;
     width: 100%;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
 .social-links {
@@ -133,51 +133,7 @@ footer {
     transform: scale(1.2);
 }
 
-
-
-
-
-
-/*toggle*/
-/* Light Mode Styles */
-.light-mode {
-    background-color: #fff;
-    color: #000;
-}
-
-.light-mode header {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.light-mode hr {
-    background-color: #000;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-}
-
-.light-mode footer {
-    color: #000;
-}
-.light-mode nav ul li a {
-    color: #333; /* Dark text for light mode */
-}
-
-.light-mode nav ul li a:hover {
-    color: #000; /* Fully black on hover */
-}
-
 /* Smooth Transition */
-body {
+body, hr, nav ul li a, footer {
     transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-hr {
-    transition: background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-nav ul li a {
-    transition: color 0.3s ease;
-}
-
-footer {
-    transition: color 0.3s ease;
 }

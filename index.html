@@ -8,10 +8,9 @@
     
     <title>vikas</title>
 
-    <link rel="icon" href="media/V2.png" type="image/x-icon">
+    <link rel="icon" href="media/V.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" type="text/css">
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -24,8 +23,6 @@
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><button id="theme-toggle">🌙</button>
-                </li>
             </ul>
         </nav>
     </header>
@@ -51,58 +48,22 @@
     </div>
 
     <footer>
-        
         <div class="social-links">
         <a href="https://github.com/vikasx89a" target="_blank">
-            <img src="media/github1.png" alt="GitHub">
+            <img src="media/github.svg" alt="GitHub">
         </a>
         <a href="mailto:vikaskapparad@gmail.com" target="_blank">
-            <img src="media/gmail.png" alt="Gmail">
+            <img src="media/gmail.svg" alt="Gmail">
         </a>        
         <a href="https://twitter.com/vikaskapparad" target="_blank">
-            <img src="media/X.png" alt="Twitter">
+            <img src="media/x.svg" alt="Twitter">
         </a>
         <a href="https://discord.com/users/vikasx89a" target="_blank">
-            <img src="media/discord.png" alt="Discord">
+            <img src="media/discord.svg" alt="Discord">
         </a>
         </div>
 
         &copy; Vikas Kapparad
-
     </footer>
-
-    <script>
-        const toggleButton = document.getElementById("theme-toggle");
-        const body = document.body;
-        const hr = document.querySelectorAll("hr");
-        const footer = document.querySelector("footer");
-        const navbar = document.querySelector("header");
-    
-        // Load saved theme from local storage
-        if (localStorage.getItem("theme") === "light") {
-            body.classList.add("light-mode");
-            toggleButton.textContent = "🌙"; // Show moon icon
-        }
-    
-        // Theme toggle function
-        toggleButton.addEventListener("click", () => {
-            body.classList.toggle("light-mode");
-    
-            if (body.classList.contains("light-mode")) {
-                localStorage.setItem("theme", "light");
-                toggleButton.textContent = "🌙"; // Moon icon for dark mode toggle
-                hr.forEach(el => el.style.backgroundColor = "#000"); // Black HR
-                navbar.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)"; // Black shadow
-                footer.style.color = "#000"; // Footer text black
-            } else {
-                localStorage.setItem("theme", "dark");
-                toggleButton.textContent = "☀️"; // Sun icon for light mode toggle
-                hr.forEach(el => el.style.backgroundColor = "#fff"); // White HR
-                navbar.style.boxShadow = "0px 4px 10px rgba(255, 255, 255, 0.2)"; // White shadow
-                footer.style.color = "#fff"; // Footer text white
-            }
-        });
-    </script>    
-
 </body>
 </html>
