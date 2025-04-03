@@ -1,73 +1,157 @@
-<!DOCTYPE html>  <!-- Declares this as an HTML5 document -->
-<html lang="en-US">  <!-- Root element, "lang" helps SEO & accessibility -->
-
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">  <!-- Ensures correct text encoding (UTF-8 supports all characters) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Responsive design for all devices -->
-    <meta name="author" content="Vikas Kapparad">  <!-- Helps search engines recognize the author -->
-    <meta name="keywords" content="HTML, Frontend Development, Web Development">  <!-- Helps SEO -->
-    <meta name="description" content="Vikas Kapparad - Aspiring Frontend Developer. A journey into web development."> <!-- Improves search results -->
-    <title>Test Code</title>  <!-- Appears in the browser tab -->
-    <link rel="icon" href="assets1/VV.png" type="image/x-icon">  <!-- Adds a tab icon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" description="Vikas">
+    <meta name="description" content="User Login Form">
+    <title>HTML Login Form</title>
 </head>
-
 <body>
-
-    <!-- Semantic Header -->
     <header>
-        <h1>Hey there! I'm Vikas - <em>aspiring frontend engineer</em></h1>
-        <hr> <!-- Used to visually separate content -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- HTML Form -->
+         <h1>User Registration Form</h1>
     </header>
-
-    <!-- Main Content Section -->
     <main>
         <section>
-            <h2>Skills I'm Learning</h2>
-            <p>I'm starting out as a complete beginner. Here are some skills I'm planning to learn:</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-                <li>TypeScript</li>
-                <li>Next.js</li>
-            </ul>
-        </section>
+            <form>
+            <fieldset>
+                <legend><strong>🔹User Information</strong></legend>
+                    <!-- First Name -->
+                    <label for="fname">First name</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="John" required minlength="3" maxlength="20"><br>
+                
+                    <!-- Last Name -->
+                    <label for="lname">Last name</label> <br>
+                    <input type="text" id="lname" name="lname" placeholder="Jacobs" minlength="3" maxlength="20"> <br>
 
-        <aside>
-            <h2>Currently Learning</h2>
-            <p>Well for now, I'm focused on:</p>
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ol>
-        </aside>
+                    <!-- E-mail -->
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" name="email" placeholder="johnjac@gmail.com" required><br>
+
+                    <!-- Phone -->
+                    <label for="phone">Phone Number</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0123456789" required><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>🔹 Account Security</strong></legend>
+                <!-- Password -->
+                <label for="pass">Password</label><br>
+                <input type="password" id="pass" name="pass" placeholder="hj78fc#%" required maxlength="8"><br>
+
+                <label for="confirm-pass">Confirm Password</label><br>
+                <input type="password" id="confirm-pass" name="confirm-pass" maxlength="8" required><br>
+
+                <!-- Security Question -->
+                <label for="security-Q">Security Question</label><br>
+                <select name="security-Q" id="security-Q" required>
+                    <option value="">Select a question...</option>
+                    <option value="pet">What is your first pet name?</option>
+                    <option value="school">What is your first school?</option>
+                    <option value="city">In what city were you born?</option>
+                </select><br>
+
+                <label for="security-A">Answer</label><br>
+                <input type="text" id="security-A" name="security-A" placeholder="Joe / New York / Midtown High School" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>🔹 Personal Details</strong></legend>
+                    <!-- Date of Birth -->
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="date" id="dob" name="dob" required><br>
+                
+                    <!-- Gender -->
+                    <label for="gender">Gender</label><br>
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br>
+
+                    <!-- Region / Continent -->
+                    <label for="Continent">Region</label><br>
+                    <select name="Continent" id="Continent" required><br>
+                        <option value="">Select your Region...</option>
+                        <option value="NA">North America</option>
+                        <option value="SA">South America</option>
+                        <option value="EU">Europe</option>
+                        <option value="AS">Asia</option>
+                        <option value="AUS">Australia</option>
+                        <option value="AF">Africa</option>
+                        <option value="AN">Antarctica</option>
+                    </select><br>
+
+                    <!-- Address -->
+                    <label for="address">Address</label><br>
+                    <textarea name="address" id="address" placeholder="Bleecker Street, 57th Avenuve" rows="3" required></textarea><br>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>🔹 Profile & Preferences</strong></legend>
+
+                    <!-- Profile Picutre -->
+                    <label for="pfp">Profile Picture</label><br>
+                    <input type="file" id="pfp" name="pfp" accept="image/*"><br>
+
+                    <!-- Interests -->
+                    <label for="interests">Hobbies</label><br>
+                    <input type="checkbox"  id="gaming" name="interests" value="Gaming">
+                    <label for="gaming">Gaming</label>
+                    <input type="checkbox" id="coding" name="interests" value="Coding">
+                    <label for="coding">Coding</label>
+                    <input type="checkbox" id="music" name="interests" value="Music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="sports" name="interests" value="Sports">
+                    <label for="sports">Sports</label><br>
+                    
+                    <!-- Languages -->
+                     <label for="lang">Language</label>
+                     <select name="lang" id="lang">
+                        <option value="">Choose a language...</option>
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Urdu">Urdu</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Chineese">Chineese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                    </select><br>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>🔹 Agreements & Submission</strong></legend>
+                    <!-- Terms and Conditions -->
+                    <input type="checkbox" id="T&C" name="T&C" required>
+                    <label for="T&C">I agree to the Terms & Conditions</label><br>
+
+                    <!-- Newsletter Subscribe -->
+                     <input type="checkbox" id="Newsletter" name="Newsletter">
+                     <label for="Newsletter">Subscribe to our Newsletter</label>
+            </fieldset>
+            
+            <br>
+
+                <div>
+                    <!--Reset & Submit Button -->
+                    <input type="reset">
+                    <input type="submit">
+                </div>
+
+            <br>
+            </form>
+        </section>
     </main>
-
-    <!-- Social Links -->
     <footer>
-        <section>
-            <h2>Connect With Me</h2>
-            <ul>
-                <li><a href="https://github.com/vikasx89a" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="mailto:vikaskapparad@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-                <li><a href="https://X.com/vikaskapparad" target="_blank" rel="noopener noreferrer">X</a></li>
-                <li><a href="https://discord.com/users/vikasx89a" target="_blank" rel="noopener noreferrer">Discord</a></li>
-            </ul>
-        </section>
-        <p>&copy; 2025 Vikas Kapparad</p>
+        <em>code by - <strong>vikas</strong></em>
     </footer>
-
 </body>
 </html>
-
